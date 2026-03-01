@@ -7,17 +7,12 @@
         <header>
             <h1><a href="/">Canoe's blog</a></h1>
         </header>
-
+    {% for post in posts %}
         <article>
-            <time> Published on March 1, 2026, 8:45 PM</time>
-            <h2><a href=""> My first post</a></h2>
-            <p> Veritas de los sancum, per veri ignatius!</p>
+            <time>published: {{ post.published_date|date:"F d, Y" }}</time>
+            <h2><a href=""> {{post.title}}</a></h2>
+            <p> {{post.text|linebreaksbr}}</p>
         </article>
-
-        <article>
-            <time> Published on March 2, 2026, 9:30 PM</time>
-            <h2><a href =""> My second post </a></h2>
-            <p> Plata porma con quardo i dia </p>
-        </article>
+    {% endfor %}
     </body>
 </html>
