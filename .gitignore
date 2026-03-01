@@ -1,1 +1,14 @@
+# Ignore local database
 db.sqlite3
+
+# Python cache files
+*.pyc
+__pycache__/
+
+# Virtual environment folders
+venv/
+env/
+
+# IDE configs
+.vscode/
+.idea/
